@@ -1,7 +1,9 @@
 @import url('normalize.css');
 @import url('reset.css');
+@import url('flex-utility.css');
 
-:root{
+:root {
+  
   /* Layout */
   --base-unit: 27px;
   --base-font: 16px;
@@ -32,29 +34,33 @@
   --button---primary: calc(var(--base-font) * 0.875);
 }
 
-body{
+body {
   font-family: "Open Sans", sans-serif;
-  font-size: var(--base-font);
+  font-size:var(--base-font);
 }
 
 /* 폰트 위계 */
-.text-heading-xl{
+.text-heading-xl {
   font-size: var(--heading--x-l);
   line-height: calc(var(--base-unit) * 3);
 }
-.text-heading-s{
+
+.text-heading-s {
   font-size: var(--heading--s);
   line-height: var(--base-unit);
 }
-.text-body-l{
+
+.text-body-l {
   font-size: var(--body--l);
   line-height: calc(var(--base-unit) * 2);
 }
-.text-body-m{
+
+.text-body-m {
   font-size: var(--body--m);
   line-height: var(--base-unit);
 }
-.text-body-m-plus{
+
+.text-body-m-plus {
   font-size: var(--body--m-plus);
   line-height: var(--base-unit);
 }
@@ -63,19 +69,19 @@ body{
 .btn{
   height: 39px;
   background: var(--super--light--gray);
-  border-radius: 3px;
+  border-radius:3px;
   padding: 0 20px;
   display: inline-flex;
-  color: var(--medium--gray);
+  color:var(--medium--gray);
   align-items: center;
   font-size: calc(var(--base-font) * 0.875);
   font-weight: bold;
-  gap: 5px;
-  text-transform: uppercase;
+  gap:5px;
+  text-transform:uppercase;
 }
 .btn-primary{
   background: var(--primary);
-  color: var(--secondary);
+  color:var(--secondary);
 }
 
 /* 폼 요소 */
@@ -91,28 +97,37 @@ form{
 form .field{
   height: calc(var(--base-unit) * 2);
   background: var(--white);
-  border-radius: 3px;
+  border-radius:3px;
   padding: 0 20px;
   display: flex;
   align-items: center;
-  color: var(--light--gray);
+  color:var(--light--gray);
 }
-.form .field input{
-  font-style: italic;
-  color: var(--black);
+form .field input{
+  font-style:italic;
+  color:var(--black);
 }
-.form .field input::placeholder{
-  color: var(--super--light--gray);
+form .field input::placeholder{
+  color:var(--super--light--gray);
 }
-.form button{
+form button{
   height: calc(var(--base-unit) * 2);
-  border-radius: 3px;
+  border-radius:3px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
+  color:var(--white);
   font-size: calc(var(--base-font) * 1.125);
-  text-transform: uppercase;
+  text-transform:uppercase;
   font-weight: bold;
-  border: 1px solid var(--white);
+  border:1px solid var(--white);
+}
+
+/* 레이아웃 */
+.container{
+  width: 1272px;
+  margin:0 auto;
+}
+.inner-pd{
+  padding: calc(var(--base-unit) * 3) 0;
 }
