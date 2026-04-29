@@ -3,6 +3,7 @@
 @import url('flex-utility.css');
 
 :root {
+
   /* Layout */
   --base-unit: 27px;
   --base-font: 16px;
@@ -64,6 +65,12 @@ body {
   line-height: var(--base-unit);
 }
 
+.text-nav{
+  font-size:var(--nav--item);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 /* 링크 버튼 */
 .btn{
   height: 39px;
@@ -78,6 +85,11 @@ body {
   gap:5px;
   text-transform:uppercase;
 }
+
+.btn .material-icons{
+  font-size: 14px;
+}
+
 .btn-primary{
   background: var(--primary);
   color:var(--secondary);
@@ -87,13 +99,15 @@ body {
 .hero{
   background: var(--hero);
 }
-form{
+
+.form{
   width: 350px;  
   display: flex;
   flex-direction:column;
   gap:10px;
 }
-form .field{
+
+.form .field{
   height: calc(var(--base-unit) * 2);
   background: var(--white);
   border-radius:3px;
@@ -102,14 +116,17 @@ form .field{
   align-items: center;
   color:var(--light--gray);
 }
-form .field input{
+
+.form .field input{
   font-style:italic;
   color:var(--black);
 }
-form .field input::placeholder{
+
+.form .field input::placeholder{
   color:var(--super--light--gray);
 }
-form button{
+
+.form button{
   height: calc(var(--base-unit) * 2);
   border-radius:3px;
   display: flex;
@@ -121,16 +138,40 @@ form button{
   font-weight: bold;
   border:1px solid var(--white);
 }
+
 /* 레이아웃 */
 .container{
   width: 1272px;
   margin:0 auto;
 }
+
 .inner-pd{
   padding: calc(var(--base-unit) * 3) 0;
 }
+
 .inner-top-pd{
   padding-top: calc(var(--base-unit) * 3);
 }
 
 /* 헤더 */
+.body > header{
+  background: var(--white);
+  padding: var(--base-unit) 0;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo span{
+  position: absolute;
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.header nav ul{
+  gap: 10px;
+}
+
+.header nav ul li:first-child{
+  margin-right: 40px;
+}
