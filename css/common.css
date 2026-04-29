@@ -3,7 +3,6 @@
 @import url('flex-utility.css');
 
 :root {
-  
   /* Layout */
   --base-unit: 27px;
   --base-font: 16px;
@@ -122,7 +121,6 @@ form button{
   font-weight: bold;
   border:1px solid var(--white);
 }
-
 /* 레이아웃 */
 .container{
   width: 1272px;
@@ -132,5 +130,7 @@ form button{
   padding: calc(var(--base-unit) * 3) 0;
 }
 .inner-top-pd{
-  padding: calc(var(--base-unit) * 3);
+  padding-top: calc(var(--base-unit) * 3);
 }
+
+/* 헤더 */
