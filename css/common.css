@@ -60,6 +60,7 @@ body {
   font-size: var(--body--l);
   line-height: calc(var(--base-unit) * 2);
   font-weight: 300;
+  text-align: center;
 }
 
 .text-body-m {
@@ -70,6 +71,8 @@ body {
 .text-body-m-plus {
   font-size: var(--body--m-plus);
   line-height: var(--base-unit);
+  text-align: center;
+  color: var(--light--gray);
 }
 .text-nav {
   font-size: var(--nav--item);
@@ -121,9 +124,17 @@ form .field {
   align-items: center;
   color: var(--light--gray);
 }
+form .field label {
+  display: flex;
+}
 form .field input {
   font-style: italic;
   color: var(--black);
+  width: 100%;
+  outline: none;
+}
+form .field:focus-within {
+  box-shadow: inset 0 0 5px rgba(72, 0, 255, 0.7);
 }
 form .field input::placeholder {
   color: var(--super--light--gray);
@@ -166,6 +177,14 @@ hr {
   background: var(--super--light--gray);
 }
 
+.text-link {
+  text-decoration: underline;
+  color: var(--primary);
+}
+section .header {
+  margin-bottom: calc(var(--base-unit) * 2);
+}
+
 /* 헤더 */
 body > header {
   background: var(--white);
@@ -178,4 +197,52 @@ header nav ul {
 }
 header nav ul li:first-child {
   margin-right: 40px;
+}
+
+/* 슬라이드 */
+.slidewrapper {
+  position: relative;
+  overflow: hidden;
+}
+.slidecontainer {
+  width: 300%; /* js 부모 너비파악, 슬라이드 개수 파악, 너비 계산 지정할 예정 */
+  display: flex;
+  transition: 0.3s ease-out;
+}
+.slidecontainer li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--base-unit);
+}
+.slidecontainer li > p {
+  width: 700px;
+  text-align: center;
+}
+.slidewrapper button {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light--gray);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slidewrapper button.prev {
+  left: 0;
+}
+.slidewrapper button.next {
+  right: 0;
+}
+
+/* CTA */
+.cta {
+  background: var(--c-t-a);
+}
+.cta h3 {
+  color: var(--white);
 }
